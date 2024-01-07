@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="icon" href="Green.jpeg" type="image/gif" sizes="40x40">
+    <meta name="google-site-verification" content="7PC7iKTfUTjnkUuA-oiX65XVKi6PKjB2dv7Bwgb1xLU" />
+    <meta name="google-site-verification" content="B7murWlhmjgmfZw1052NxRC4yK_DSCDR-W3bPftFVhU" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Patua+One|Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            var x = document.getElementById('from').value;
+            var y = document.getElementById('to').value;
+            var subject = document.getElementById('subject').value;
+            var body = document.getElementById('body').value;
+            if (x == "") {
+                alert("From Address must be filled out");
+                return false;
+            }
+
+            if (y == "") {
+                alert("To Address must be filled out");
+                return false;
+            }
+            if (subject == "") {
+                alert(" Subject must be filled out");
+                return false;
+            }
+            if (body == "") {
+                alert("Body must be filled out");
+                return false;
+            }
+
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "noreplyty751@gmail.com",
+                Password: "gct@1234",
+                To: "mahe.1817130@gct.ac.in",
+                From: x,
+                Subject: subject,
+                Body: body,
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=button] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+
+    <style>
+        .profile-card {
+            border: 0 !important;
+        }
+
+        .profile-card-header {
+            padding: 0;
+            text-align: center;
+            background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg);
+            background-position: center center;
+            background-size: cover;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.555);
+            height: 70vh;
+        }
+
+        .bg-overlay {
+            width: 100%;
+            height: 100%;
+            padding-top: 30px;
+            padding-bottom: 60px;
+            background-color: rgba(0, 0, 0, 0.767);
+        }
+
+        .profile-img {
+            top: 40px;
+            border-radius: 30%;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.479);
+            max-width: 150px;
+        }
+
+        .profile-card-body {
+            text-align: center;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.13);
+            border: 0 !important;
+        }
+
+        .profile-card-footer {
+            background-color: #ffffff;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.13);
+            border: 0 !important;
+        }
+
+        .name,
+        .username {
+            color: #ffffff;
+        }
+
+        .name {
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .username {
+            font-weight: 300;
+            font-size: 1rem;
+            opacity: .75;
+        }
+
+        .profile-info {
+            color: #ffffff;
+            margin-top: 1.5vh;
+        }
+
+        .profile-info h3 {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .profile-info-row div {
+            display: inline-block;
+        }
+
+        .profile-info-row div span {
+            display: block;
+        }
+
+        .profile-info-row div:nth-child(2) {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+
+        .profile-info-row div span:first-child {
+            font-weight: 700;
+        }
+
+        .btn-follow {
+            border-radius: 35px;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            /* width: 20%; */
+            color: #ffffff;
+            background-color: #000000;
+            background: rgba(0, 0, 0, 0.137);
+            border: 2px solid #ffffff;
+            box-shadow: none;
+            font-size: 14px;
+        }
+
+        .btn-follow:hover,
+        .btn-follow:active {
+            color: #ffffff;
+            background-color: #000000;
+        }
+
+        .ver {
+            max-width: 20px;
+        }
+
+        .hashtag:before {
+            content: '#';
+        }
+
+        .hashtag {
+            color: #006af5;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body,
+        html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Full height image header */
+        @media screen and (min-width: 480px) {
+            .bgimg-1 {
+
+
+
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7J8sqy1D23vWiWcP1AN6h4DJGXlCjZzwzePcwDCWxUt4lrJ_VAdqOSNeOiQCHuAkf32k&usqp=CAU");
+
+
+
+
+
+                min-height: 0%;
+                float: center;
+                display: block;
+                margin: 0 auto;
+            }
+
+        }
+
+        @media screen and (max-width: 480px) {
+
+            .bgimg-1 {
+                width: "500";
+                height: "200";
+                background-position: center;
+
+                background-image: url("https://babiyouthfamilyservice.files.wordpress.com/2014/05/about-us-banner.jpg?w=724");
+
+                align-content: center;
+
+
+                min-height: 0%;
+
+                float: center;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=button] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="" class="w3-bar-item w3-button w3-wide">Green and Green Engineering solutions</a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="http://gges.in" class="w3-bar-item w3-button">Home</a>
+                <a href="https://maheshwaran-p.github.io/GGES/about-us" class="w3-bar-item w3-button">About Us</a>
+                <a href="https://maheshwaran-p.github.io/GGES/our-clients" class="w3-bar-item w3-button">Our Clients
+                </a>
+                <a href="https://maheshwaran-p.github.io/GGES/products-and-services"
+                    class="w3-bar-item w3-button">Products
+                </a>
+                <a href="https://maheshwaran-p.github.io/GGES/services" class="w3-bar-item w3-button">Services </a>
+                <a href="https://maheshwaran-p.github.io/GGES/blog" class="w3-bar-item w3-button">Blogs</a>
+                <a href="https://maheshwaran-p.github.io/GGES/contact-us" class="w3-bar-item w3-button">Contact Us</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+            ×</a>
+        <a href="http://gges.in" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+        <a href="https://maheshwaran-p.github.io/GGES/about-us" onclick="w3_close()" class="w3-bar-item w3-button">About
+            Us</a>
+        <a href="https://maheshwaran-p.github.io/GGES/our-clients" onclick="w3_close()"
+            class="w3-bar-item w3-button">Our clients</a>
+        <a href="https://maheshwaran-p.github.io/GGES/products-and-services" class="w3-bar-item w3-button">Products
+        </a>
+        <a href="https://maheshwaran-p.github.io/GGES/services" class="w3-bar-item w3-button">Services </a>
+        <a href="https://maheshwaran-p.github.io/GGES/blog" onclick="w3_close()" class="w3-bar-item w3-button">Blog</a>
+        <a href="https://maheshwaran-p.github.io/GGES/contact-us" class="w3-bar-item w3-button">Contact Us</a>
+
+    </nav>
+    <style>
+        @media screen and (max-width: 480px) {
+            .gap {
+                height: 20%;
+            }
+        }
+
+        @media screen and (min-width: 480px) {
+            .gap {
+                height: 10%;
+            }
+        }
+    </style>
+
+    <div class="gap" style="height: 10%;"></div>
+    <h3 style="padding-left: 9%; font-weight: bold;">Reach Us</h3>
+
+
+    <div class="container">
+        <form method="post">
+            <label for="lname">Name</label>
+            <input type="text" id="to" name="to" placeholder="Name">
+
+            <label for="fname">Email</label>
+            <input type="text" id="from" name="from" placeholder="example@gmail.com">
+
+
+
+
+            <label for="lname">Subject</label>
+            <input type="text" id="body" name="body" placeholder="Subject">
+
+            <label for="subject">Compose Your Content Here </label>
+            <textarea id="subject" name="subject" placeholder="Compose ..." style="height:200px"></textarea>
+
+            <input type="button" value="Send Email" onclick="sendEmail()" /><br><br><br>
+            <div style="align-items: center;"></div>
+            <h1 style=" text-align:center">
+                Address
+            </h1>
+            <p style=" text-align:center">
+                HEAD OFFICE : NO 6/586 D,
+                <br>
+                KAMARAJAR NAGAR, A S PETTAI,<br>
+                NAMAKKAL, TAMIL NADU - 637001<br>
+                PHONE: +91- 81445 38414<br>
+                EMAIL: hiphopofficialteam@gmail.com<br>
+
+            </p>
+    </div>
+    </form>
+    </div>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
