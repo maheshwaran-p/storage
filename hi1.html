@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://maheshwaran-p.github.io/storage/device-uuid.min.js" type="text/javascript"></script>
+    <title>Alert Dialog Example</title>
+    <script>
+        function showAlert() {
+            var deviceUuid = new DeviceUUID().get();
+        console.log('uuid:' + deviceUuid)
+            alert(`your device id is : ${deviceUuid} `);
+        }
+    </script>
+</head>
+<body onload="showAlert()">
+    <!-- Your HTML content goes here -->
+    <h1>find your divice id</h1>
+    <p>refresh page to find your find</p>
+</body>
+</html>
